@@ -21,6 +21,8 @@ Clients: string[];
 Projects: string[];
 Years: string[];
 TeamMembersSummary: any[];
+TeamMembers: any[];
+
   ngOnInit(): void { 
     this.Designation="Team Leader";
     this.Username="Kanhu";
@@ -49,7 +51,36 @@ TeamMembersSummary: any[];
      {Region:"North East", TeamMembersCount:"50", UnavailableMembers:"20", AvailableMembers:"30"},
       
     ];
+    this.TeamMembers=[
+      {
+        Region:"East", Members:[
+        {Id:1, Name:"Ford", Status:"Available"},
+        {Id:2, Name:"Tata", Status:"Available"},
+        {Id:3, Name:"Audi", Status:"Busy"},
+        {Id:4, Name:"Ferrari", Status:"Busy"}
+       ]
+      },
+      { 
+        Region:"West", Members:[
+        {Id:1, Name:"For", Status:"Available"},
+        {Id:2, Name:"Tat", Status:"Available"},
+        {Id:3, Name:"Aud", Status:"Available"},
+        {Id:4, Name:"Ferrar", Status:"Busy"}
+
+        ]
+       },
+       {Region:"North", Members:[
+       {Id:1, Name:"Fo", Status:"Available"},
+       {Id:2, Name:"Ta", Status:"Available"},
+       {Id:3, Name:"udi", Status:"Available"},
+       {Id:4, Name:"rrari", Status:"Busy"}
+         ]
+       },
+
+    ]
   }
+
+
   onProjectChange($event)
   {
     if($event.target.innerHTML == "Project A"){
